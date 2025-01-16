@@ -1,0 +1,49 @@
+.footer {
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    color: #ddd;
+    padding: 40px 0;
+    position: relative;
+}
+
+.footer-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-tagline {
+    font-size: 1rem;
+    color: #aaa;
+    font-style: italic;
+}
+
+.footer-title {
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 15px;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-link:hover img {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.footer-rights {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footer-rights:hover {
+    color: white;
+    transition: color 0.3s ease;
+}

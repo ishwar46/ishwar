@@ -20,7 +20,7 @@ export const Banner = () => {
     }, delta);
 
     return () => { clearInterval(ticker) };
-  }, [text])
+  }, [text]);
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -45,22 +45,22 @@ export const Banner = () => {
     } else {
       setIndex(prevIndex => prevIndex + 1);
     }
-  }
+  };
 
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div className={isVisible ? "animate__animated animate__fadeInLeft" : ""}>
                   <span className="tagline">Welcome to my Portfolio</span>
-                  <h1>{`Hi! I'm Ishwar`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
+                  <h1>{`Hi! I'm Ishwar`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Mobile Application Developer", "Software Developer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
                   <p>Hi! I'm Ishwar, a Mobile App Developer with over 2 years of experience creating impactful solutions. I specialize in Flutter development, working extensively with Riverpod and BLoC for state management. My portfolio includes designing apps for 26+ microfinance institutions, building UI/UX-centric applications, and developing systems like a Human Resource Management app and an Event Management platform for the 36th ACSIC Conference in Nepal.
 
                     I’m also skilled in the MERN stack, delivering full-stack solutions, and thrive on combining functionality with design to create seamless user experiences.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
+                  <button onClick={() => console.log('connect')} className="connect-btn">Let’s Connect <ArrowRightCircle size={25} /></button>
                 </div>}
             </TrackVisibility>
           </Col>
@@ -68,12 +68,12 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img" />
+                  <img src={headerImg} alt="Header" className="header-img" />
                 </div>}
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-  )
-}
+  );
+};
